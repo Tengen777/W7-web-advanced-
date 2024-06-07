@@ -11,29 +11,34 @@
       </div>
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      
-      <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-      </script>
+      <div class="container">
+        <h1>Gegevens invoeren</h1>
+        <form id="userDataForm">
+          <div class="form-group">
+            <label for="name">Naam</label>
+            <input type="text" class="form-control" id="name" placeholder="STUDENT-" required>
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Geboortedatum (DD-MM-YYYY)</label>
+            <input type="text" class="form-control" id="birthdate" placeholder="DD-MM-YYYY" required>
+          </div>
+          <div class="form-group">
+            <label for="ssn">Rijksregisternummer (xx.xx.xx-xxx.xx)</label>
+            <input type="text" class="form-control" id="ssn" placeholder="xx.xx.xx-xxx.xx" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Leeftijd (positief getal)</label>
+            <input type="number" class="form-control" id="age" placeholder="Leeftijd" min="0" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefoonnummer (BE)</label>
+            <input type="text" class="form-control" id="phone" placeholder="BE" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Verzenden</button>
+        </form>
+      </div>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
 
 
 
